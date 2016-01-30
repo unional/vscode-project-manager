@@ -20,24 +20,29 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:extension.saveProject",
-    "onCommand:extension.openProject"
+    "onCommand:projectManager.saveProject",
+    "onCommand:projectManager.openProject",
+    "onCommand:projectManager.removeProject"
   ],
-  "main": "./out/src/extension",
+  "main": "./out/src/project-manager",
   "contributes": {
     "commands": [
       {
-        "command": "extension.saveProject",
-        "title": "Save Project"
+        "command": "projectManager.saveProject",
+        "title": "Project: Save Project"
       },
       {
-        "command": "extension.openProject",
-        "title": "Open Project"
+        "command": "projectManager.openProject",
+        "title": "Project: Open Project"
+      },
+      {
+        "command": "projectManager.removeProject",
+        "title": "Project: Remove Project"
       }
     ],
     "keybindings": [
       {
-        "command": "extension.openProject",
+        "command": "projectManager.openProject",
         "key": "shift+alt+p",
         "mac": "cmd+ctrl+p"
       }
