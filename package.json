@@ -1,0 +1,55 @@
+{
+  "name": "project-manager",
+  "displayName": "project-manager",
+  "description": "Project Manager for VSCode",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unional/vscode-project-manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/unional/vscode-project-manager/issues"
+  },
+  "homepage": "https://github.com/unional/vscode-project-manager#readme",
+  "publisher": "unional",
+  "license": "MIT",
+  "engines": {
+    "vscode": "^0.10.1"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.saveProject",
+    "onCommand:extension.openProject"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.saveProject",
+        "title": "Save Project"
+      },
+      {
+        "command": "extension.openProject",
+        "title": "Open Project"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.openProject",
+        "key": "shift+alt+p",
+        "mac": "cmd+ctrl+p"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./"
+  },
+  "devDependencies": {
+    "tslint": "^3.3.0",
+    "typescript": "^1.6.2",
+    "vscode": "0.10.x"
+  }
+}
